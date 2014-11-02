@@ -10,14 +10,16 @@ node* get_node();
 void insert_end(int x);
 void insert_beg(int x);
 void insert_mid(int x, int l);
+void delete_beg(node **head);
 void display();
 int length();
+void reverse();
 int main()
 {
 	int a,ch,l;
 	while(1)
 	{
-		printf("\n1. Create\n2.Insert at end\n3.Display\n4.Exit\n5.Insert at Beg\n6.Insert at mid");
+		printf("\n1. Create\n2.Insert at end\n3.Display\n4.Exit\n5.Insert at Beg\n6.Insert at mid\n7.Delete beg");
 		printf("\nEnter your choice:");
 		scanf("%d",&ch);
 		switch(ch){
@@ -38,7 +40,10 @@ int main()
 				scanf("%d%d",&a,&l);
 				insert_mid(a,l);
 				break;
-			
+			case 7: delete_beg(&HEAD);
+				break;
+			case 8: reverse();
+				break;
 		}
 	}
 }
@@ -150,6 +155,12 @@ void insert_mid(int x, int l)
 			printf("\nout of memory\n");
 	}
 }
+void delete_beg(node **head)
+{
+	node *temp = *head;
+	*head = temp->next;
+	free(temp);
+}
 void display()
 {
 	node *ptr;
@@ -160,4 +171,18 @@ void display()
 		ptr = ptr->next;
 	}
 	printf("end of node\n");
+}
+void reverse()
+{
+	node *ptr = HEAD;
+	node *new;
+	node *prev = NULL;
+	while(ptr!=NULL)
+	{
+		new = ptr->next;
+		ptr->next = prev;
+		prev = ptr;
+		ptr = new;
+	}
+	HEAD = prev;
 }
