@@ -1,16 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	int n,p[100],q[100],i,count=0;
+	int n,p,q,i,count=0,buff;
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 	{
-		scanf("%d%d",&p[i],&q[i]);
+		scanf("%d %d",&p,&q);
+		
+		if(p + 2 <= q)
+			y++;
+		else
+			s = 0;
 	}
-	for(i=1;i<=n;i++)
-	{
-		if((q[i]-p[i])>=2)
-			count++;
-	}
-	printf("%d\n",count);
+	printf("%d\n", y+s);
+	
+	return 0;
 }
