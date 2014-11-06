@@ -10,9 +10,9 @@ int main()
 		if(p + 2 <= q)
 			y++;
 		else
-			s = 0;
+			buff = 0;
 	}
-	printf("%d\n", y+s);
+	printf("%d\n", y+buff);
 	
 	return 0;
 }
