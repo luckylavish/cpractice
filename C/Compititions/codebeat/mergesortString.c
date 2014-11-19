@@ -9,6 +9,8 @@ int main()
 	s3=(char *)malloc(sizeof(char));
 	scanf("%s",s1);
 	scanf("%s",s2);
+	while(s1[++i]!='\0')
+		printf("%c",s1[i]);/*
 	while(s1[i]!='\0' || s2[j]!='\0')
 	{
 		if(s1[i]>s2[j])
@@ -26,6 +28,6 @@ int main()
 	}while(s1[i]!=0)
 	{
 		s3[k++] = s2[i++];
-	}
+	}*/
 	return 0;
 }

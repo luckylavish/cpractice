@@ -32,12 +32,10 @@ int main()
 	{
 		if(TOP==0 || stack[TOP] != s[i])
 		{
-			printf("pushed %c\n",s[i]);
 			push(stack,s[i]);
 		}
 		else
 		{
-			printf("pop\n");
 			pop(stack);
 		}
 		i++;
