@@ -47,3 +47,6 @@ long long int calculation(long long int n)
 	}
 	return sum;
 }
+
+# This would be costly approach in order of running time.
+#Instead a smple frmula for the arithmatic progression would be : If n%2==0: print T/2  else: ((T-1)/2)-T
