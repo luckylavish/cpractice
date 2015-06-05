@@ -4,7 +4,7 @@ int main()
 	int arr[]={1,23,4,6,7,8};
 	int *ptr;
 	int i;
-	ptr = &arr;
+	ptr = arr;
 	for(i=0;i<6;i++)
 	{
 		printf("arr[%d] = %d\n",i,arr[i]);
